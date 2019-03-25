@@ -3,16 +3,21 @@ import ReactDOM from 'react-dom';
 
 import '../assets/stylesheets/application.scss';
 
-const Hello = ({ name }) => {
+import SearchBar from "./components/searchbar";
+
+const Structure = () => {
   return (
-    <div>
-      Hello,
-      {name}
-    </div>
+  	<div className="full">
+  		<div className = "leftSide">
+  			<SearchBar />
+	    </div>
+	    <div className="rightSide">
+	    </div>
+  	</div>
   );
 };
 
 const root = document.getElementById('root');
 if (root) {
-  ReactDOM.render(<Hello name="World" />, root);
+  ReactDOM.render(<Structure />, root);
 }
