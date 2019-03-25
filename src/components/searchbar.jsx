@@ -8,7 +8,7 @@ class SearchBar extends Component {
 		};
 	}
 	render() {
-		return <input type="text" className={this.state.focused ? 'focused search' : "search"} onFocus={this.handleFocusIn} onBlur={this.handleFocusOut}  placeholder="Search here"/>
+		return <input type="text" className={this.state.focused ? 'focused search' : "search"} onFocus={this.handleFocusIn} onBlur={this.handleFocusOut} onChange={this.handleChange} placeholder="Search here"/>
 	}
 	handleFocusIn = () => {
 		this.setState({ focused: true})
@@ -18,7 +18,9 @@ class SearchBar extends Component {
 		this.setState({ focused: false})
 	}
 
-
+	handleChange = (event) => {
+		this.props.search(event.target.value)
+	}
 }
 
 export default SearchBar;
