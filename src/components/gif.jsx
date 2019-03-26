@@ -9,7 +9,7 @@ class Gif extends Component {
 	render() {
 		const link = `https://media1.giphy.com/media/${this.props.id}/200.gif`
 		return(
-			<img src={link} className="gif" onClick={this.props.clickFunction} link={this.props.id}></img>
+			<img src={link} className="gif" onClick={this.props.clickFunction}></img>
 		)
 	}
 }
